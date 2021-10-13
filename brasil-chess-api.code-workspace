@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"path": "functions"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"cSpell.words": [
+			"EVENTARGUMENT",
+			"EVENTTARGET",
+			"Nasc"
+		]
+	}
+}
