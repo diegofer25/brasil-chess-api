@@ -16,7 +16,11 @@ export function playerController() {
     const sortDirection = query.sort === "desc" ? -1 : 1;
 
     if (typeof query.search === "string") {
-      filter.$text = { $search: query.search };
+      filter.$text = {
+        $search: `"${query.search}" ${query.search}`,
+        $caseSensitive: false,
+        $diacriticSensitive: false,
+      };
       options.sort?.score ? options.sort.score = { $meta: "textScore" } : null;
     } else {
       options.sort?.name ? options.sort.name = sortDirection : null;
